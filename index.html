@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate on scroll</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <head>
+        <div class="head">
+            <div class="head-img"></div>
+            <div class="head-content">
+                <h1>Animation based on scroll using CSS</h1>
+                <p>Scroll animations in CSS bring elements to life as they enter the viewport, making pages more interactive. By using CSS @keyframes you can trigger animations when elements appear on screen  helps control the animation start, stop, and delay based on scroll position, allowing for precise animation timing and effects as users scroll through the page.</p>    
+            </div>
+        </div>
+    </head>
+    <main>
+        <div class="intro">
+            <h3>Introduction</h3>
+            <br>
+            <div class="left-para">
+                <p><b>animation-timeline: </b> </p>
+                <p> Feature that allows developers to synchronize animations with specific events , like scroll position. Animation-timeline can dynamically adjust the animation progress based on an external trigger. This enables more flexible and responsive animations, particularly useful for scroll-triggered effects or custom interactive elements.</p>    
+            </div>
+            <div class="right-para">
+                <p><b>animation-range:</b></p>
+                <p> is designed to control the specific portion or "range" of an animation that plays based on external factors like scroll position allowing for more control over animation when animations start, pause, or progress. </p>    
+            </div>
+        </div>
+        <div class="scroll">
+            <h3>animation-timeline</h3>
+            <p><b>scroll():</b> animation start to proceed once you start scrolling and execute completely once you scroll through your whole web page</p>
+            <p class="note">(NOTE: scroll():- default i.e, scroll along y axis, scroll(x):- scroll along x-axis, scroll(y):-scroll along y axis)</p>
+            <div class="scroll-img-1"></div>
+            <br>
+            <p><b>view():</b> animation proceed as soon as element enters into the viewport and complete at the end of viewport</p>
+            <div class="note">
+                <p>(NOTE: view() default full viewport, view(top bottom) the top and bottom of the viewport, view(bottom) bottom of the viewport)</p>
+            </div>
+            <div class="view-img-1"></div>
+        </div>
+        <div class="view">
+            <h3>animation-range</h3>
+            <p>Unlike traditional animations that run continuously, animation-range enables finer control, so only a chosen part of the animation plays within a specified range of user input or viewport area.</p>
+            <div class="vie-div">
+                <p><b>animation-range-start:</b> decide when to <b>start</b> animation</p>
+                <p><b>animation-range-end:</b> decide when to <b>end</b> animation</p>
+                <p>animation-range: start end</p>
+            </div>
+            <div class="vie-div-2">
+                <p><b>some attribute to use in animation range function:</b></p>
+                <p><b>cover :</b> To cover the perticular range of viewport</p>
+                <p><b>contain :</b> range of viewport</p>
+                <p><b>entry :</b> to run animation while <u>entering</u> the the viewport and animation couplets after it completely <u>enters</u> the viewport</p>
+                <p><b>exit :</b> to run animation while the <u>exiting</u> the viewport and animation couplets after it completely <u>exit</u> the viewport</p>
+                <p><b>entry-crossing :</b> hor much area the block should cover to complete its animation while entering</p>
+                <p><b>exit-crossing :</b> hor much area the block should cover to complete its animation while entering</p>
+            </div>
+        </div>
+        <div class="cover">
+            <h3>cover x:</h3>
+            <P>animation start as the element starts to enter the viewport and cover the x amount of area on viewport to complete that animation eg., the following image covers the 40% of viewport i.e, as it reach the 40% of viewport thw animation will complete</P>
+            <p class="note">(NOTE: we must also declare the entry point like in this example the entry point is 'entry 0')</p>
+            <div class="cover-img"></div>
+        </div>
+        <div class="entry">
+            <h3>entry x:</h3>
+            <p>animation start as the element start to enter the viewport or cover the x amount in the viewport and completes that animation when it fully enters into the viewport eg., the following image start to appear the vary moment it enters the 200px above the viewport </p>
+            <div class="entry-img"></div>
+        </div>
+        <div class="exit">
+            <h3>exit x:</h3>
+            <p>animation start as you start to exit the viewport or when you exit the x amount in viewport and complete when you fully exit the viewport eg., the following image start to disappear once it start to exit through the viewport </p>
+            <div class="exit-img"></div>
+        </div>
+        <div class="entry-crossing">
+            <h3>entry-crossing x:</h3>
+            <p>start the animation once you start to enter into the viewport and complete it when x amount of element enters into the viewport eg., this image will fully appear when 50% of the image enters into the viewport</p>
+            <p class="note">(NOTE 1: need to declare the entry point like entry point for this example is 'entry 0')</p>
+            <p class="note">(NOTE 2: scroll slowly to observe the changes)</p>
+            <div class="entry-crossing-img"></div>
+        </div>
+        <div class="exit-crossing">
+            <h3>exit-crossing x:</h3>
+            <p>start the animation once you start to exit the viewport and complete it when x amount of element is exit through the viewport eg., the following image will completely disappear when 50% of image exit through the viewport</p>
+            <p class="note">(NOTE : scroll slowly to observe the changes)</p>
+            <div class="exit-crossing-img"></div>
+        </div>
+    </main>
+    <div class="some-css-animation">
+        <h2>some useful css animation based on scroll</h2>
+        <br>
+        <div class="ani-1">
+            <div class="a">
+                <a href="E:\yadnesh2024\code\projects\scroll animation using css\source code\ani-1.txt"><b>animation no. 1</b></a>
+            </div>
+            <div class="ani-1-window">
+                <div class="block1-1" style="padding-top: 500px;">
+                    <div class="b1-1" style="height: 100px; width: 600px;"></div>
+                </div>
+                <div class="block1-1" style="padding-top: 500px;">
+                    <div class="b1-1" style="height: 100px; width: 200px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 200px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 600px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 600px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 200px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 200px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 600px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 600px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 200px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 200px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 600px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 600px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 200px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 200px;"></div>
+                </div>
+                <div class="block1-1">
+                    <div class="b1-1" style="height: 100px; width: 600px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="a">
+            <a href="E:\yadnesh2024\code\projects\scroll animation using css\source code\ani-2.txt"><b>animation no. 2</b></a>
+        </div>
+        <div class="ani-2">
+            
+            <div class="head2-window">
+                <div class="head2">
+                    <div class="head-badkgroun"></div>
+                    <div class="head2-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sequi delectus, modi, nesciunt distinctio a alias quibusdam provident consectetur accusamus soluta in! Voluptas consectetur at eius architecto recusandae doloremque velit!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

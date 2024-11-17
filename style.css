@@ -1,0 +1,386 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+.note{
+    font-weight: 100;
+    font-size: smaller;
+}
+.head{
+    height: 800px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head-img{
+    height: 800px;
+    width: 1000px;
+    background-image: url("image/pexels-ahmedadly-1270184.jpg");
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+    animation: head-img linear;
+    animation-timeline: view();
+    animation-range: exit;
+}
+@keyframes head-img{
+    to{
+        scale: 2;
+        opacity: 0;
+    }
+}
+.head-content{
+    /* height: 500px;
+    width: 700px;
+    padding-top: 200px; */
+    color: white;
+    z-index: 2;
+    animation: head-contact linear;
+    animation-timeline: view();
+    animation-range: exit -400px;
+}
+@keyframes head-contact{
+    to{
+        scale: 0.5;
+        opacity: 0;
+    }
+}
+
+
+main{
+    margin-top: 100px;
+    width: 150vh;
+}
+.scroll{
+    margin-top: 100px;
+    height: 700px;
+    position: relative;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    border-bottom: 1px solid gray;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+
+}
+
+.intro{
+    border-bottom: 1px solid gray;
+    padding-bottom: 50px;
+}
+@keyframes fade-in{
+    to{
+        opacity: 1;
+    }
+}
+
+.left-para{
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: left-para linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+.right-para{
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: left-para linear forwards;
+    animation-timeline: view();
+    animation-range: entry 100px cover 60%;
+}
+@keyframes left-para{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scroll-img-1{
+    margin-top: 50px;
+    background-image: url("image/scroll-img-1.jpg ");
+    background-size: cover;
+    height: 300px;
+    width: 400px;
+    opacity: 0;
+    scale: 0.6;
+    animation: scroll-img-1 linear;
+    animation-timeline: scroll();
+}
+@keyframes scroll-img-1{
+    to{
+        scale: 1.15;
+        opacity: 1;
+    }
+}
+
+.view-img-1{
+    background-image: url("image/view-img-1.jpg");
+    background-size: cover;
+    height: 300px;
+    width: 400px;
+    opacity: 0;
+    scale: 0.6;
+    animation: view-img-1 linear;
+    animation-timeline: view();
+}
+@keyframes view-img-1{
+    to{
+        scale: 1.15;
+        opacity: 1;
+    }
+}
+
+.view{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vie-div{
+    border: 1px solid gray;
+    width: 500px;
+    opacity: 0;
+    padding: 10px;
+    animation: vie-div linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    transform: translateX(-100px);
+    margin: 20px;
+}
+@keyframes vie-div{
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.vie-div-2{
+    border: 1px solid gray;
+    width: 700px;
+    opacity: 0;
+    padding: 10px;
+    animation: vie-div-2 linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    transform: translateX(100px);
+    margin: 20px;
+}
+@keyframes vie-div-2{
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cover-img{
+    height: 300px;
+    width: 500px;
+    background-image: url(image/view-img-1.jpg);
+    background-size: cover;
+    opacity: 0;
+    scale: 0.5;
+    animation: cover-img linear forwards;
+    animation-timeline: view();
+    animation-range:entry 0 cover 40%;
+}
+@keyframes cover-img{
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entry-img{
+    height: 300px;
+    width: 500px;
+    background-image: url(image/view-img-1.jpg);
+    background-size: cover;
+    opacity: 0;
+    scale: 0.5;
+    animation: entry-img linear forwards;
+    animation-timeline: view();
+    animation-range:entry 200px;
+}
+@keyframes entry-img{
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.exit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.exit-img{
+    height: 300px;
+    width: 500px;
+    background-image: url(image/view-img-1.jpg);
+    background-size: cover;
+    animation: exit-img linear forwards;
+    animation-timeline: view();
+    animation-range:exit;
+}
+@keyframes exit-img{
+    to{
+        opacity: 0;
+        scale: 0.5;
+    }
+}
+
+.entry-crossing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entry-crossing-img{
+    height: 300px;
+    width: 500px;
+    background-image: url(image/view-img-1.jpg);
+    background-size: cover;
+    opacity: 0;
+    scale: 0.4;
+    animation: entry-crossing-img linear forwards;
+    animation-timeline: view();
+    animation-range:entry 0 entry-crossing 50%;
+}
+@keyframes entry-crossing-img{
+    to{
+       opacity: 1;
+       scale: 1;
+    }
+}
+.exit-crossing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.exit-crossing-img{
+    height: 300px;
+    width: 500px;
+    background-image: url(image/view-img-1.jpg);
+    background-size: cover;
+    opacity: 1;
+    scale: 1;
+    animation: exit-crossing-img linear forwards;
+    animation-timeline: view();
+    animation-range: exit-crossing 50%;
+}
+@keyframes exit-crossing-img{
+    to{
+       opacity: 0;
+       scale: 0.5;
+    }
+}
+.some-css-animation{
+    margin-top: 100px;
+}
+.a{
+    margin-bottom: 20px;
+}
+
+.ani-1-window{
+    width: 900px;
+    display: flex;
+    height: 400px;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    border: 1px solid gray;
+    margin-bottom: 100px;
+}
+.block1-1{
+    margin: 10px;
+}
+.b1-1{
+    opacity: 0;
+    scale: 0.7;
+    background-color: rgb(34, 34, 34);
+    animation: ani-1 linear forwards;
+    animation-timeline:view() ;
+    animation-range: entry 0 cover 40%;
+}
+@keyframes ani-1{
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.head2-window{
+    height: 800px;
+    width: auto;
+}
+.ani-2{
+    width: 900px;
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+}
+.head-badkgroun{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(34, 34, 34);
+    z-index: -1;
+    position: relative;
+    top: 90px;
+    animation: head-background linear;
+    animation-timeline: view();
+    animation-range:exit ;
+}
+.head2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head2-content{
+    width: 400px;
+    position: relative;
+    top: -60px;
+    z-index: 3;
+    animation: head-content linear;
+    animation-timeline: view();
+    animation-range:exit -50px;
+}
+
+@keyframes head-background{
+    to{
+        scale: 2;
+        opacity: 0;
+    }
+}
+@keyframes head-content{
+    to{
+        scale: 0.5;
+        opacity: 0;
+    }
+}

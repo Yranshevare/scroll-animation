@@ -1,0 +1,46 @@
+html:-
+<div class="head">
+    <div class="head-background"></div>
+    <div class="head-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sequi delectus, modi, nesciunt distinctio a alias quibusdam provident consectetur accusamus soluta in! Voluptas consectetur at eius architecto recusandae doloremque velit!</p>
+                        
+    </div>
+</div>
+
+CSS:-  
+//add height,width,padding,margin according to your own need 
+.head-background{
+    //can aslo add background image here
+    background-color: rgb(34, 34, 34);
+    position: relative;
+    top: 90px;  //paly with this value to perfectly arrange the background under the content
+    animation: head-background linear;
+    animation-timeline: view();
+    animation-range:exit ;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head-content{
+    position: relative;
+    top: -60px; //paly with this value to perfectly adjust it over the background
+    z-index: 3; //to keep content above the background
+    animation: head-content linear;
+    animation-timeline: view();
+    animation-range:exit -50px;
+}
+
+@keyframes head-background{
+    to{
+        scale: 2;
+        opacity: 0;
+    }
+}
+@keyframes head-content{
+    to{
+        scale: 0.5;
+        opacity: 0;
+    }
+}
